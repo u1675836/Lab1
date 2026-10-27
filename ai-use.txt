@@ -1,0 +1,23 @@
+AI Use Statement - Lab 1: Peer Tutoring Hub
+
+1. AI tool used
+Claude (Anthropic)
+
+2. Prompt(s) used
+- "Here is the Lab 1 instructions PDF and the base code zip. Complete the lab."
+- "Explain what each Bootstrap class in my pages does (container, row, col-md-6,
+  form-label, form-control, btn)."
+
+3. How AI helped
+The AI reviewed the base code and pointed out problems: index.html linked to
+"lab1/tutors.html" and "lab1/images/..." (wrong relative paths), request-form.html
+had no doctype, lang, charset, title, or stylesheet link, and styles.css had an
+invalid color value ("fffff"). It helped me add Bootstrap 5.3 from the CDN, use a
+responsive grid (row / col-12 col-md-6), add Bootstrap form classes, and create
+process-request.php. I tested every page with "php -S 0.0.0.0:8000".
+
+4. A suggestion I tested, revised, or rejected
+The base CSS placed each form field with fixed grid-row / grid-column rules.
+I tested it with Bootstrap and the rules conflicted with Bootstrap's grid, so I
+removed them and let Bootstrap's row / col classes handle the two-column layout
+on wide screens and the single-column layout on phones.
