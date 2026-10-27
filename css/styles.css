@@ -1,0 +1,116 @@
+/* Peer Tutoring Hub
+   Shared stylesheet for index.html, tutors.html, and request-form.html.
+   Loaded AFTER Bootstrap so these rules can customize Bootstrap's defaults.
+*/
+
+/* Colors used across the site */
+:root {
+    --brand-color: #1d4e89;
+    --brand-dark: #153a66;
+    --text-color: #202124;
+    --light-bg: #f4f7fb;
+}
+
+/* Page typography and background */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--brand-color);
+    margin-bottom: 1rem;
+}
+
+/* Top navigation bar */
+.site-header {
+    background-color: var(--brand-color);
+}
+
+.site-name {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-link-custom {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom:focus {
+    text-decoration: underline;
+}
+
+/* Buttons: give Bootstrap's primary button our brand color */
+.btn-primary {
+    background-color: var(--brand-color);
+    border-color: var(--brand-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--brand-dark);
+    border-color: var(--brand-dark);
+}
+
+.btn-outline-primary {
+    color: var(--brand-color);
+    border-color: var(--brand-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--brand-color);
+    border-color: var(--brand-color);
+}
+
+/* Tutor table */
+.table {
+    background-color: #ffffff;
+}
+
+caption {
+    caption-side: top;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+/* Request form card */
+.request-form {
+    max-width: 820px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #d6dbe2;
+    border-radius: 8px;
+}
+
+.form-label {
+    font-weight: 700;
+}
+
+/* Narrow screens: tighten spacing so content stays readable */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-link-custom {
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+
+    .request-form {
+        padding: 1.25rem;
+    }
+
+    .request-form .btn {
+        width: 100%;
+    }
+}
